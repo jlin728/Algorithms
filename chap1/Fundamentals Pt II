@@ -50,3 +50,33 @@ Create a function messyMath(num) that will return the following sum:
       Otherwise, if current count is evenly divisible by 7, include it twice in sum instead of once;
       Regardless of the above, if current count is exactly 1/3 of num , return -1 immediately.
         For example, if given num is 4 , return 7 . If given num is 8 , return 34 . If given num is 15 , return -1 .
+
+Twelve-Bar Blues
+  Write a function that console.log s the number 1 , then " chick ", then " boom ", then " chick ", then 2 , then " chick ", " boom ", " chick " – continuing the same cycle for each number up to (including) 12 .
+
+Fibonacci
+  Create a function to generate Fibonacci numbers. In this famous mathematical sequence, each number is the sum of the previous two, starting with values 0 and 1. Your function should accept one argument, an index into the sequence (where 0 corresponds to the initial value, 4 corresponds to the value four later, etc). Examples: fibonacci(0) = 0 (given), fibonacci(1) = 1 (given), fibonacci(2) = 1 ( fib(0) + fib(1) , or 0+1), fibonacci(3) = 2 ( fib(1) + fib(2) , or 1+1), fibonacci(4) = 3 (1+2), fibonacci(5) = 5 (2+3), fibonacci(6) = 8 (3+5), fibonacci(7) = 13 (5+8), etc.
+
+Sum to One Digit
+  Kaitlin sees beauty in numbers, but also believes that less is more. Implement sumToOne(num) that sums a given integer’s digits repeatedly until the sum is only one digit. Return that one-digit result. Example: sumToOne(928) returns 1 , because 9+2+8 = 19, then 1+9 = 10, then 1+0 = 1 .
+
+Clock Hand Angles
+  Regardless of how hard a Dojo student works (and they should work hard), they need time now and then to unwind – like hands on a clock. Traditional clocks are increasingly uncommon, but most can still read an analog clock’s hands of hours, minutes and seconds. Create clockHandAngles(seconds) that, given a number of seconds since 12:00:00, prints angles (in degrees) of the hour, minute and second hands. As review, 360 degrees form a full rotation. For input of 3600 secs (equivalent to 1:00:00), print "Hour hand: 30 degs. Minute hand: 0 degs. Second hand: 0 degs." For an input parameter seconds of 119730 (which is equivalent to 9:15:30 plus 24 hours!), you should log "Hour hand: 277.745 degs. Minute hand: 93 degs. Second hand: 180 degs." Note: in the second example, the angle for the minute hand is not simply 90 degrees; it has advanced a bit further, because of the additional 30 seconds in that minute so far.
+  Second: also calculate and print degrees for an additional “week hand” that rotates once each week.
+
+Is Prime
+  Return whether a given integer is prime. Prime numbers are only evenly divisible by themselves and 1. Many highly optimized solutions exist, but for now just create one that is easy to understand and debug .
+
+Math Library
+  A library is a related set of functions and values that have been grouped together under a common name. Traditionally this is done for less common functions, so they can be excluded from certain minimized versions of a language (e.g.: if we want a micro-JavaScript for some future Apple Ring™). Looking back now, it seems incredible that a language without math functions would be useful. Nonetheless JavaScript has grouped certain numerical functions and values into the Math library. When using these, put Math. before it (just like when using log() from console library!). Note that libraries are not limited to just functions. They can also include values such as Math.PI . Right now, however, we will focus on four functions in this library: random() , floor() , ceil() and trunc() .
+
+The first, Math.random , returns a randomly generated decimal number between 0 and 1. It can theoretically return zero, but it cannot return one; for this reason, you can think of it as returning some number between zero and ‘almost-one’ . The other three functions are related: they accept a decimal number and return an integer . Given an integer, all three leave it unchanged . Otherwise, floor is a pessimist, ceil is an optimist, and trunc is a simplifier. Math.floor makes negative numbers more negative, and positives less positive. Conversely, Math.ceil makes positives more positive, and negatives less negative. Math.trunc drops any fraction, moving the number toward zero.
+Math.floor(2.718) and Math.trunc(2.718) both return 2 , but Math.ceil(2.718) returns 3 . Math.floor(-3.1416) is -4 ; both Math.trunc(-3.1416) and Math.ceil(-3.1416) are -3 .
+Naturally, Math.ceil(42) == Math.trunc(42) == Math.floor(42) == 42 .
+One last idea. What if you want a random integer as low as 51 and as high as 100? Math.random() is “from 0 to almost-one”. Math.random() *50 , then, is “from 0 to almost-50”. Let’s turn those decimal ranges into integers: Math.trunc( Math.random()*50 ) is “50 possible integers from 0 to 49”. Let’s add an offset, so we start at 51: Math.trunc(Math.random()*50) +51 is perfect. Whew!
+
+Rockin’ the Dojo Sweatshirt
+  Ever since you arrived at the Dojo, you wanted one of those cool Coding Dojo sweatshirts – maybe even more than one. Let’s say they cost $20 (including tax), but friendly Josh gives a 9% discount if you buy two, a nice 19% discount if you buy three, or a sweet 35% discount if you buy four or more. He only accepts cash and says he doesn’t have coins, so you should round up to the nearest dollar. Build function sweatshirtPricing(num) that, given a number of sweatshirts, returns the cost.
+
+Clock Hand Angles, Revisited
+  Return to your previous clockHandAngles solution. Allow fractional values for input seconds , but change your implementation to print only integer values for angles (in degrees) of the various hands.
