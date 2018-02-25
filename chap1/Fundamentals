@@ -1,9 +1,9 @@
 Setting and Swapping
-  Set myNumber to 42 . Set myName to your name. Now swap myNumber into myName & vice versa.
+  Set myNumber to 42 . Set myName to your name. Now swap myNumber into myName & vice versa.  
 
 Print -52 to 1066
   Print integers from -52 to 1066 using a FOR loop.
-
+  
 Don’t Worry, Be Happy
   Create beCheerful() . Within it, console.log string "good morning!" Call it 98 times.
 
