@@ -80,3 +80,23 @@ Rockin’ the Dojo Sweatshirt
 
 Clock Hand Angles, Revisited
   Return to your previous clockHandAngles solution. Allow fractional values for input seconds , but change your implementation to print only integer values for angles (in degrees) of the various hands.
+
+Using Modulo to Extract a Digit
+  If variable myBigNum contained a big number, how would you get the value of the ‘hundreds’ digit? (To review, the hundreds digit of 32768 is ‘7’, since it is thirty-two thousand, seven hundred sixty-eight.) First, you might myBigNum= myBigNum / 100 , to shift the decimal point to exactly where you want (result: 327.68). Then, Math.floor(myBigNum) could remove any decimal leftovers (result: 327). Finally, you could use % to extract only the ‘ones’ digit. What is % and how does it work?
+  The % (modulo) operator often goes with / (divide). Basically, % divides first number evenly by second, and returns remainder. Example: 255 % 20 is 15 , and 16 % 2 is 0 . And … 327 % 10 becomes the 7 we want. Putting it all together, we print the ‘hundreds’ digit like this:
+  console.log(Math.floor(myBigNum / 100) % 10);
+  Let’s decode this. Formulas are computed inside out, so start with the division inside the parentheses. Once we’ve done that, our formula is simplified:
+  console.log(Math.floor(327.68) % 10);
+  Then comes the floor call. After evaluating that, our formula is:
+  console.log(327 % 10);
+  And finally comes the modulo operation, after which we have this!
+  console.log(7);
+
+Extract-o-matic
+  Create the extractDigit(num,digitNum) function that given a number and a digit number, returns the numeral value of that digit. 0 represents the ones digit, 1 represents the tens digit, etc. Given (1824,2) , return 8 . Given (1824,0) , return 4 . Given (1824,7) , return 0 .
+  Second: handle negative digitNum values, where -1 represents tenths digit (0.x), -2 represents hundredths digit (0.0x), etc. Given (123.45,-1) , return 4 .
+  Third: handle negative num values as well, doing what you think is appropriate.
+
+Most Significant Digit
+  If you already know who Ada Lovelace is, that’s great! In a History of Science, she is significant . Given number of any size, return the most significant digit. If you already know what strings are, that’s great! However, don’t use them here . Hint: use WHILE to bring the most significant digit into range where you can use the friendly modulus operator ( % ). The most significant digit is the leftmost non-zero digit of a number. Given 12345 , return 1 . Given 67.89 , return 6 . Given 0.00987 , return 9 .
+  Second: handle negative num values as well, doing what you think is appropriate.
