@@ -2,7 +2,13 @@ The “Basic 13”
 These are Coding Dojo’s foundation “Basic 13” algorithm challenges. For each, write a JavaScript function -a suggested function name is included below. Can you finish all of these challenges in less than two minutes each?
 
 Print 1-255
-print1To255()
+print1To255(){
+  arr = [];
+  for (var i = 1, i<256, i++){
+    arr.push(i);
+  }
+  return arr;
+}
 
 Print all the integers from 1 to 255.
 Print Ints and Sum 0-255
