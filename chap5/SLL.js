@@ -59,3 +59,20 @@ this.front = function () {
         }
     }
 }
+
+// addBack
+// Create a function that creates a ListNode with given value and inserts it at end of a linked list.
+
+this.addBack = function(val) {
+    if (this.next != null){     //same as if(node) ---> "if node exists"
+        var runner = this.head;     //set runner or temp variable here to maintain pointer.
+        while (this.next != null){
+            runner = runner.next;
+        }
+        runner.next.val = val;      // video ex. temp.next = { val: value, next: null}
+    }
+}
+
+// video ex.
+// addBack(obj1, 'd');
+// console.log(obj1);
