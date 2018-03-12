@@ -1,0 +1,29 @@
+function loop (min, max){
+	if (min < max) {
+		loop (min + 1, max);
+		}
+}
+
+function sigma(num){
+	if (num > 0){
+	return n+sigma(num - 1);
+	}
+}
+
+----OR----
+
+function sigma(num, sum){
+	if (num > sum){
+	sum += num;
+	sigma (num-1, sum);
+	}
+	return sum;
+}
+
+
+
+function factorial(num){
+	if (num > 0){
+	return n*facorial(num - 1);
+	}
+}
