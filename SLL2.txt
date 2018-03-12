@@ -1,0 +1,106 @@
+
+
+function listNode(value){
+	this.value = value;
+	this.next = null;
+}
+
+function sList(){
+	this.head = null;
+	this.tail = null;
+}
+
+
+// length - Create a function that accepts a pointer to first list node, and returns number of nodes in sList. 
+
+function length () {
+	var runner = this.head;
+	var counter = 0;
+	if (runner.next == null){
+		return null;
+	}
+	while (runner.next != null){			// same as while (node.next)
+		counter++;
+		runner = runner.next;
+	}
+	return counter;
+}
+
+
+// average - Create a standalone function average(node) that returns the average of all values contained in that list.
+
+function average () {
+	var runner = this.head;
+	var sum = 0;
+	var counter = 0;
+	while(runner.next != null){
+		sum+= runner.val;
+		counter ++;
+		runner = runner.next;
+	}
+	return (sum/counter);				//can I do this?
+
+	
+// min, max - Create function min(node) and max(node) to returning smallest and largest values in the list.
+
+function minMax () {
+	var runner = this.head;
+	var min = 0;
+	var max = 0;
+	while (runner.next != null){
+		if (runner.val < min) {
+			min = runner.val;
+		}
+		else if (runner.val > max) {	// Should I use an else if or another if?
+			max = runner.val;
+		}
+		else {
+			continue;					// For cases where the runner.val is equal to the min or max.
+		}
+	}
+	console.log (min, max);					//How do I return 2 values without saying "return... return..."?
+}
+
+
+// display - Create display(node) for debugging that returns a string containing all list values. Build what you wish console.log(myList) did!
+
+function display (arr){
+	var myList = [];
+	var runner = this.head;
+	while(runner.next != null){
+		myList.push(runner.val);
+		runner = runner.next;
+	}
+	console.log(myList);
+}
+
+
+// prependVal - Create prependVal(list,value,before) that inserts a new node with given value immediately before the node with before (or at end). Return the new list. 
+
+function prependVal(arr, val, before) {			// this function takes an arr but how do i reference it within the function? 
+	var runner = this.head;
+	var val = val;
+	var before = before;
+	var this.arr = new Arr ();
+	
+	while (runner.val != null) {
+		if (runner.val == before) {
+		this.head = val;
+		this.next = runner;
+		runner = runner.next;
+		}
+	}
+	if (runner.next == null){
+		runner.next = val;
+	}
+	return Arr();
+}
+
+
+// removeVal - Create removeVal(list,value) that removes from our list the node with the given value. Return the new list.
+
+
+
+
+// appendVal - Create appendVal(list,value,after) that inserts a new listNode with given value immediately after the node containing after (or at end). Return the new list. 
+
