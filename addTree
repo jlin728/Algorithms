@@ -1,0 +1,19 @@
+function Node(val){
+  this.val = val;
+  this.left = null;
+  this.right = null;
+}
+
+function Tree (val){
+  this.root = new Node(val);
+  this.add = (val) {
+    var runner = this.root;
+    while(runner!=null){
+      if((val == runner.val){
+        return "Duplicate";
+      }
+     else if (val < runner.val){
+      if(runner.left == null{
+        runner.left = new Node(val);
+      }
+      
